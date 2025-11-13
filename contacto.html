@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Proyecto VANT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #111; color: #eee; margin: 0; padding: 0; }
+        .contact-wrapper { max-width: 500px; margin: 50px auto; background: #1a1a1a; padding: 20px; border-radius: 10px; }
+        .contact-wrapper h2 { color: #66ccff; text-align: center; }
+        label { display:block; margin-top:10px; }
+        input, textarea {
+            width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px;
+            border: none; border-radius: 5px;
+        }
+        button {
+            background-color: #66ccff; color: black; padding: 10px 20px;
+            border: none; border-radius: 5px; cursor: pointer; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-wrapper">
+        <h2>Formulario de Contacto</h2>
+        <form action="https://formspree.io/f/xayrqjvz" method="POST">
+            <label>Nombre</label>
+            <input type="text" name="name" placeholder="Tu nombre" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <label>Mensaje</label>
+            <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
