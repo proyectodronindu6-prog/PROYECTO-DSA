@@ -56,6 +56,18 @@ body::before {
   border-radius: 10px;
   background: white;
   padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .logo-central img {
@@ -89,6 +101,52 @@ p, ul {
     padding: 20px;
   }
 
+  /* Los logos se quedan en horizontal con tamaños reducidos */
+  .logo-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .logo-container img {
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  .logo-central img {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+  .content {
+    padding: 20px;
+  }
+
   /* Los logos permanecen en fila horizontal */
   .logo-container {
     flex-direction: row;
@@ -99,9 +157,24 @@ p, ul {
   }
 
   .logo-container img {
-    width: 30vw;
-    max-width: 120px;
-  }
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
   .logo-central img {
     width: 35vw;
@@ -129,9 +202,24 @@ p, ul {
   }
 
   .logo-container img {
-    width: 60%;
-    max-width: 220px;
-  }
+  width: 150px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
   .logo-central img {
     width: 70%;
