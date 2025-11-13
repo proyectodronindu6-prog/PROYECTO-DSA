@@ -2,23 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyecto DSA - Presentación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto DSA: un dron creado por estudiantes para mejorar la seguridad aeroportuaria con tecnología sustentable y educativa.">
+  <title>Proyecto DSA: Dron de Seguridad Aeroportuaria | Escuela Industrial N.°6</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 40px;
-      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
     }
-
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .content, .logo-container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+    }
     .logo-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 0 auto 40px auto;
-      max-width: 900px;
     }
-
     .logo-container img {
       width: 160px;
       border: 2px solid #ccc;
@@ -26,40 +45,37 @@
       background: white;
       padding: 10px;
     }
-
     .logo-central {
       flex-grow: 1;
       text-align: center;
     }
-
     .logo-central img {
       width: 220px;
     }
-
-    .content {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #2c3e50;
-      margin-top: 40px;
+    h1, h2 {
       text-align: center;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     }
-
     p, ul {
       line-height: 1.8;
-      color: #333;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
-
     ul {
       padding-left: 20px;
     }
-
     .equipo {
       margin-top: 40px;
       text-align: center;
       font-style: italic;
+    }
+    a {
+      color: #66ccff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ffffff;
     }
   </style>
 </head>
@@ -71,46 +87,28 @@
   </div>
 
   <div class="content">
+    <h1>Proyecto DSA: Dron de Seguridad Aeroportuaria</h1>
     <h2>✈️ ¿Qué es el Proyecto DSA?</h2>
     <p>El Proyecto DSA (Dron de Seguridad Aeroportuaria) es una iniciativa innovadora creada por estudiantes de la Escuela Industrial N.° 6 “X Brigada Aérea” de Río Gallegos, que busca aplicar la tecnología en beneficio de la seguridad en los aeropuertos.</p>
     <p>Frente a situaciones reales que pusieron en riesgo operaciones aéreas, surgió la idea de construir un dron capaz de inspeccionar pistas, detectar peligros y disuadir animales, todo de forma más rápida, económica y segura que los métodos tradicionales.</p>
-
     <h2>🔍 ¿Por qué es importante?</h2>
     <p>Hoy en día, muchas inspecciones en pistas se realizan de forma manual, lo que puede generar errores humanos y poner en riesgo a aeronaves y personas. Un caso concreto ocurrió en 2022, cuando un ave fue succionada por el motor de un avión en pleno despegue, debido a una falla en la inspección previa.</p>
     <p>Este proyecto no solo busca evitar incidentes como ese, sino también demostrar que, con trabajo y formación técnica, es posible crear soluciones reales desde la escuela.</p>
-
     <h2>🌍 Tecnología con impacto real</h2>
-    <p>
-  El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como 
-  <strong>impresoras 3D</strong> 
-  (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank" style="color:#0077cc; text-decoration:underline;">Frontera 3D</a>), 
-  sistemas electrónicos programables y software de control de vuelo.
-</p>
-
-    <p>
+    <p>El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como <strong>impresoras 3D</strong> (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank">Frontera 3D</a>), sistemas electrónicos programables y software de control de vuelo.</p>
     <p>Pero lo más importante es que su diseño tiene una visión sustentable y práctica:</p>
     <ul>
       <li>Reduce el uso de vehículos terrestres y combustible</li>
       <li>Disminuye la carga de trabajo del personal</li>
       <li>Ofrece una nueva herramienta educativa y profesional</li>
     </ul>
-
     <h2>📚 Más que un proyecto escolar</h2>
     <p>Además de su utilidad técnica, el DSA tiene un enorme valor educativo. Permite a los estudiantes aplicar conocimientos reales, trabajar en equipo, y prepararse para desafíos del mundo laboral.</p>
     <p>El dron también cumple con las normativas nacionales e internacionales, lo que abre la puerta a que pueda ser utilizado en aeropuertos reales o replicado en otras escuelas técnicas del país.</p>
-
     <h2>🙌 Un trabajo con visión de futuro</h2>
     <p>El Proyecto DSA demuestra que con compromiso, creatividad y conocimiento, es posible transformar una idea en una solución concreta. Es un ejemplo de cómo la educación técnica pública puede generar herramientas útiles para la sociedad y el sector aeronáutico.</p>
-
     <div class="equipo">
-      <p><strong>Equipo de Trabajo</strong></p>
-      <p>Montiel Fabrizzio – Lisandro Medina – Inalef Luciano – Alancay Lautaro</p>
-      <p><strong>Docentes:</strong> Sabino Cayo – Ramón Gómez</p>
-      <p>Gracias a todos los que apoyaron este proyecto educativo y técnico.</p>
-    
-      <div class="equipo">
-        <p><strong>Contacto:</strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
-      </div>
+      <p><strong>Contacto:</strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
     </div>
   </div>
 </body>
