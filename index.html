@@ -391,10 +391,15 @@ body {
 
 <section class="formulario" id="formulario">
   <h2>Contacto Rápido</h2>
-  <form>
-    <input type="text" placeholder="Tu nombre" required>
-    <input type="email" placeholder="Tu correo" required>
-    <textarea placeholder="Tu mensaje" required></textarea>
+  <form action="https://formsubmit.co/proyecto.dron.indu6@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="correo" placeholder="Tu correo" required>
+    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+    <!-- Opcional: redirección -->
+    <input type="hidden" name="_next" value="https://example.com/gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+
     <button type="submit">Enviar</button>
   </form>
 </section>
