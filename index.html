@@ -7,103 +7,115 @@
   <title>Proyecto DSA: Dron de Seguridad Aeroportuaria | Escuela Industrial N.°6</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-/* Fondo dinámico con degradado oscuro */
+/* Fondo estilo pista aérea */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: white;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #1b2735, #090a0f);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
   min-height: 100vh;
   position: relative;
 }
 
-/* Animación de fondo */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Contenedores con efecto de vidrio */
+/* Efecto de panel técnico */
 .content, .logo-container {
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
   padding: 30px;
   margin: 20px auto;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 173, 255, 0.15);
 }
 
-/* Logos con brillo suave */
+/* Logos con estilo institucional */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 .logo-container img {
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  width: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 8px;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .logo-container img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Tipografías y títulos modernos */
+.logo-central img {
+  width: 150px;
+}
+
+/* Títulos técnicos */
 h1, h2 {
   text-align: center;
-  color: #00ffe5;
-  text-shadow: 0 0 10px rgba(0, 255, 229, 0.5);
-  letter-spacing: 1px;
+  color: #00b4d8;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(0, 180, 216, 0.3);
 }
 
 p, ul {
   color: #e0f7fa;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
+/* Listas */
+ul {
+  padding-left: 20px;
+  list-style-type: "✈ ";
+}
+
+/* Enlaces */
 a {
-  color: #00ffe5;
+  color: #00b4d8;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #ffffff;
 }
 
-/* Animaciones */
+/* Animaciones de entrada */
 .fade-in {
   opacity: 0;
-  animation: fadeIn ease 1s forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
 .fade-in-delayed {
   opacity: 0;
-  animation: fadeIn ease 1s forwards;
+  animation: fadeIn 1s ease forwards;
   animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Modo móvil */
+/* Responsivo */
 @media (max-width: 768px) {
   .logo-container {
     flex-direction: row;
-    justify-content: space-between;
-    gap: 5px;
-    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   .logo-container img {
-    width: 80px;
+    width: 70px;
   }
 
   .logo-central img {
-    width: 100px;
+    width: 90px;
   }
 
   .content {
