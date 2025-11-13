@@ -235,6 +235,29 @@ p, ul {
     font-size: 1.3rem;
   }
 }
+
+/* Animaciones de entrada generales */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1s forwards;
+}
+
+.fade-in-delayed {
+  opacity: 0;
+  animation: fadeIn ease 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Transición suave para títulos y párrafos */
+h1, h2, p, ul, .equipo {
+  transition: all 0.5s ease-in-out;
+}
+
 </style>
 </head>
 <body>
@@ -247,41 +270,41 @@ p, ul {
   </div>
 
   <div class="content">
-    <h1>Proyecto DSA: Dron de Seguridad Aeroportuaria</h1>
-    <h2>✈️ ¿Qué es el Proyecto DSA?</h2>
-    <p>El Proyecto DSA (Dron de Seguridad Aeroportuaria) es una iniciativa innovadora creada por estudiantes de la Escuela Industrial N.° 6 “X Brigada Aérea” de Río Gallegos, que busca aplicar la tecnología en beneficio de la seguridad en los aeropuertos.</p>
-    <p>Frente a situaciones reales que pusieron en riesgo operaciones aéreas, surgió la idea de construir un dron capaz de inspeccionar pistas, detectar peligros y disuadir animales, todo de forma más rápida, económica y segura que los métodos tradicionales.</p>
-    <h2>🔍 ¿Por qué es importante?</h2>
-    <p>Hoy en día, muchas inspecciones en pistas se realizan de forma manual, lo que puede generar errores humanos y poner en riesgo a aeronaves y personas. Un caso concreto ocurrió en 2022, cuando un ave fue succionada por el motor de un avión en pleno despegue, debido a una falla en la inspección previa.</p>
-    <p>Este proyecto no solo busca evitar incidentes como ese, sino también demostrar que, con trabajo y formación técnica, es posible crear soluciones reales desde la escuela.</p>
-    <h2>🌍 Tecnología con impacto real</h2>
-    <p>El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como <strong>impresoras 3D</strong> (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank">Frontera 3D</a>), sistemas electrónicos programables y software de control de vuelo.</p>
-    <p>Pero lo más importante es que su diseño tiene una visión sustentable y práctica:</p>
-    <ul>
+    <h1 class="fade-in">Proyecto DSA: Dron de Seguridad Aeroportuaria</h1>
+    <h2 class="fade-in">✈️ ¿Qué es el Proyecto DSA?</h2>
+    <p class="fade-in-delayed">El Proyecto DSA (Dron de Seguridad Aeroportuaria) es una iniciativa innovadora creada por estudiantes de la Escuela Industrial N.° 6 “X Brigada Aérea” de Río Gallegos, que busca aplicar la tecnología en beneficio de la seguridad en los aeropuertos.</p>
+    <p class="fade-in-delayed">Frente a situaciones reales que pusieron en riesgo operaciones aéreas, surgió la idea de construir un dron capaz de inspeccionar pistas, detectar peligros y disuadir animales, todo de forma más rápida, económica y segura que los métodos tradicionales.</p>
+    <h2 class="fade-in">🔍 ¿Por qué es importante?</h2>
+    <p class="fade-in-delayed">Hoy en día, muchas inspecciones en pistas se realizan de forma manual, lo que puede generar errores humanos y poner en riesgo a aeronaves y personas. Un caso concreto ocurrió en 2022, cuando un ave fue succionada por el motor de un avión en pleno despegue, debido a una falla en la inspección previa.</p>
+    <p class="fade-in-delayed">Este proyecto no solo busca evitar incidentes como ese, sino también demostrar que, con trabajo y formación técnica, es posible crear soluciones reales desde la escuela.</p>
+    <h2 class="fade-in">🌍 Tecnología con impacto real</h2>
+    <p class="fade-in-delayed">El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como <strong>impresoras 3D</strong> (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank">Frontera 3D</a>), sistemas electrónicos programables y software de control de vuelo.</p>
+    <p class="fade-in-delayed">Pero lo más importante es que su diseño tiene una visión sustentable y práctica:</p>
+    <ul class="fade-in-delayed">
       <li>Reduce el uso de vehículos terrestres y combustible</li>
       <li>Disminuye la carga de trabajo del personal</li>
       <li>Ofrece una nueva herramienta educativa y profesional</li>
     </ul>
-    <h2>📚 Más que un proyecto escolar</h2>
-    <p>Además de su utilidad técnica, el DSA tiene un enorme valor educativo. Permite a los estudiantes aplicar conocimientos reales, trabajar en equipo, y prepararse para desafíos del mundo laboral.</p>
-    <p>El dron también cumple con las normativas nacionales e internacionales, lo que abre la puerta a que pueda ser utilizado en aeropuertos reales o replicado en otras escuelas técnicas del país.</p>
-    <h2>🙌 Un trabajo con visión de futuro</h2>
-    <p>El Proyecto DSA demuestra que con compromiso, creatividad y conocimiento, es posible transformar una idea en una solución concreta. Es un ejemplo de cómo la educación técnica pública puede generar herramientas útiles para la sociedad y el sector aeronáutico.</p>
+    <h2 class="fade-in">📚 Más que un proyecto escolar</h2>
+    <p class="fade-in-delayed">Además de su utilidad técnica, el DSA tiene un enorme valor educativo. Permite a los estudiantes aplicar conocimientos reales, trabajar en equipo, y prepararse para desafíos del mundo laboral.</p>
+    <p class="fade-in-delayed">El dron también cumple con las normativas nacionales e internacionales, lo que abre la puerta a que pueda ser utilizado en aeropuertos reales o replicado en otras escuelas técnicas del país.</p>
+    <h2 class="fade-in">🙌 Un trabajo con visión de futuro</h2>
+    <p class="fade-in-delayed">El Proyecto DSA demuestra que con compromiso, creatividad y conocimiento, es posible transformar una idea en una solución concreta. Es un ejemplo de cómo la educación técnica pública puede generar herramientas útiles para la sociedad y el sector aeronáutico.</p>
     
-    <div class="equipo">
-      <p><strong>Equipo de Trabajo</strong></p>
-      <ul>
+    <div class="equipo fade-in-delayed">
+      <p class="fade-in-delayed"><strong>Equipo de Trabajo</strong></p>
+      <ul class="fade-in-delayed">
         <li>Montiel Fabrizzio</li>
         <li>Lisandro Medina</li>
         <li>Inalef Luciano</li>
         <li>Alancay Lautaro</li>
       </ul>
-      <p><strong>Docentes:</strong> Sabino Cayo – Ramón Gómez</p>
-      <p>Gracias a todos los que apoyaron este proyecto educativo y técnico.</p>
+      <p class="fade-in-delayed"><strong>Docentes:</strong> Sabino Cayo – Ramón Gómez</p>
+      <p class="fade-in-delayed">Gracias a todos los que apoyaron este proyecto educativo y técnico.</p>
     </div>
 
-<div class="equipo">
-      <p><strong>Contacto:</strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
+<div class="equipo fade-in-delayed">
+      <p class="fade-in-delayed"><strong>Contacto:</strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
     </div>
   </div>
 </body>
