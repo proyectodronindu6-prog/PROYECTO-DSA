@@ -7,23 +7,35 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      text-align: center;
       padding: 40px;
+      margin: 0;
     }
 
-    h1 {
-      color: #333;
+    h1, h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    p, ul {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     .logo-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 40px;
+      margin: 40px auto;
+      max-width: 800px;
     }
 
     .logo-container img {
-      width: 180px;
+      width: 160px;
       max-width: 100%;
       border: 2px solid #ccc;
       border-radius: 10px;
@@ -39,17 +51,83 @@
     .logo-central img {
       width: 220px;
     }
+
+    section {
+      margin-bottom: 60px;
+    }
   </style>
 </head>
 <body>
   <h1>Proyecto DSA - Escuela Industrial N°6 "X Brigada Aérea"</h1>
-  <p>Este es un sitio web creado para presentar el proyecto Dron de Seguridad Aeroportuaria (DSA).</p>
-
   <div class="logo-container">
     <div><img src="escuela.jpeg" alt="Logo Escuela"></div>
     <div class="logo-central"><img src="logo.jpg" alt="Logo DSA"></div>
     <div><img src="tecnicatura.jpeg" alt="Logo Aeronáutica"></div>
   </div>
+
+  <section>
+    <h2>Bienvenidos al Proyecto DSA</h2>
+    <p>El Dron de Seguridad Aeroportuaria (DSA) es una iniciativa desarrollada por estudiantes de la Escuela Industrial N°6 “X Brigada Aérea”, en Río Gallegos. Su objetivo es aplicar tecnología de vanguardia al servicio de la inspección y gestión de pistas en entornos aeroportuarios.</p>
+  </section>
+
+  <section>
+    <h2>Objetivos del Proyecto</h2>
+    <ul>
+      <li><strong>General:</strong> Construir un dron operativo para el ámbito aeronáutico civil.</li>
+      <li><strong>Específicos:</strong>
+        <ul>
+          <li>Reducir costos de inspección y mejorar la seguridad operacional.</li>
+          <li>Disuadir fauna en pistas de aterrizaje.</li>
+          <li>Incorporar tecnología sustentable y de bajo impacto.</li>
+          <li>Optimizar el uso de personal técnico.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>¿Por qué un dron?</h2>
+    <p>Las inspecciones manuales de pista son costosas y propensas a errores humanos. Un incidente real en el aeropuerto de San Fernando en 2022 demostró cómo una omisión humana provocó el ingreso de un ave en un motor durante el despegue.</p>
+    <p>El DSA nace como respuesta a este tipo de situaciones, aportando una herramienta segura, automatizada y de bajo costo para inspecciones eficientes.</p>
+  </section>
+
+  <section>
+    <h2>¿Cómo funciona el dron?</h2>
+    <p>El dron está diseñado bajo principios de aerodinámica y mecánica aplicados a vehículos multirrotor:</p>
+    <ul>
+      <li><strong>Empuje:</strong> generado por las hélices para levantar el peso del dron.</li>
+      <li><strong>Sustentación:</strong> fuerza que permite mantenerse en el aire.</li>
+      <li><strong>Torque:</strong> controla la orientación y maniobras del dron.</li>
+      <li><strong>Estabilidad:</strong> gestionada por una controladora con software Cleanflight.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Drones en la Industria</h2>
+    <p>Países como Canadá, Estados Unidos y España ya implementan drones para inspección de pistas y gestión de fauna. El proyecto DSA toma como referencia estas experiencias internacionales para aplicarlas localmente.</p>
+  </section>
+
+  <section>
+    <h2>Normativa</h2>
+    <p>El DSA cumple con la normativa nacional argentina (RAAC 101) y toma como guía las recomendaciones internacionales de OACI e IATA. Está autorizado para operar bajo ciertas condiciones en el Aeroclub de Río Gallegos.</p>
+  </section>
+
+  <section>
+    <h2>Costos y Viabilidad</h2>
+    <p>El prototipo fue construido con una combinación de piezas compradas y fabricadas en la escuela (impresión 3D, electrónica, ensamblaje). Su costo es mucho menor que el de drones comerciales.</p>
+    <p>Esto lo convierte en una opción ideal para educación técnica y aplicaciones reales dentro de aeropuertos.</p>
+  </section>
+
+  <section>
+    <h2>Equipo de Trabajo</h2>
+    <ul>
+      <li>Millalonco Fabricio</li>
+      <li>Lisandro Medina</li>
+      <li>Inalef Luciano</li>
+      <li>Alancay Lautaro</li>
+    </ul>
+    <p><strong>Docentes:</strong> Sabino Cayo – Ramón Gómez</p>
+    <p><em>Gracias a todos los que apoyaron este proyecto educativo y técnico.</em></p>
+  </section>
 </body>
 </html>
-
