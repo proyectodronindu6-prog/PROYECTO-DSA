@@ -82,8 +82,40 @@ p, ul {
 @media (max-width: 768px) {
 
   body {
-    background-attachment: scroll; /* evita zoom raro en celulares */
+    background-attachment: scroll;
   }
+
+  .content {
+    padding: 20px;
+  }
+
+  /* Los logos permanecen en fila horizontal */
+  .logo-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo-container img {
+    width: 30vw;
+    max-width: 120px;
+  }
+
+  .logo-central img {
+    width: 35vw;
+    max-width: 140px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
 
   .content {
     padding: 20px;
