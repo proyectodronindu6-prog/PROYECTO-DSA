@@ -173,9 +173,127 @@ body {
   background-color: #00b4d8;
 }
 
+
+/* HERO SECTION */
+.hero {
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-content h1 {
+  font-size: 2.2rem;
+  color: #00b4d8;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.cta-button {
+  padding: 10px 20px;
+  background-color: #66ccff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+/* GALERIA */
+.galeria {
+  text-align: center;
+}
+.galeria-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.galeria-grid img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #66ccff;
+}
+
+/* CRONOGRAMA */
+.cronograma {
+  padding: 20px;
+}
+.cronograma .timeline {
+  list-style: none;
+  padding-left: 0;
+}
+.cronograma .timeline li {
+  padding: 10px 0;
+  border-left: 4px solid #66ccff;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* FORMULARIO */
+.formulario {
+  text-align: center;
+  padding: 20px;
+}
+.formulario form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formulario input, .formulario textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.formulario button {
+  background-color: #66ccff;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.formulario button:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
+/* BOTÓN FLOTANTE */
+.floating-contact {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background-color: #66ccff;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px 13px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+.floating-contact:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
 </style>
 </head>
 <body>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>DSA: Tecnología para un cielo más seguro</h1>
+    <p>Un proyecto estudiantil con impacto real en la seguridad aeroportuaria</p>
+    <a href="#proyecto" class="cta-button">Conocer el Proyecto</a>
+  </div>
+</section>
+
 
   <header class="navbar">
     <nav>
@@ -247,6 +365,42 @@ body {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
+
+
+<section class="galeria" id="galeria">
+  <h2>Galería del Proyecto</h2>
+  <div class="galeria-grid">
+    <img src="fondo.jpg" alt="Montaje del dron">
+    <img src="385ce2c0-07eb-4137-8bf3-dbf433884412.jpg" alt="Plano técnico">
+    <img src="logo.jpg" alt="Logo DSA">
+  </div>
+</section>
+
+
+<section class="cronograma" id="cronograma">
+  <h2>Cronograma del Proyecto</h2>
+  <ul class="timeline">
+    <li><strong>Abril:</strong> Inicio de la idea y primeros bocetos</li>
+    <li><strong>Mayo - Junio:</strong> Diseño técnico y planificación</li>
+    <li><strong>Julio - Septiembre:</strong> Construcción del dron</li>
+    <li><strong>Octubre:</strong> Pruebas y ajustes</li>
+    <li><strong>Noviembre:</strong> Presentaciones en escuelas técnicas</li>
+  </ul>
+</section>
+
+
+<section class="formulario" id="formulario">
+  <h2>Contacto Rápido</h2>
+  <form>
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+
+<a href="mailto:proyecto.dron.indu6@gmail.com" class="floating-contact" title="Escribinos">✉️</a>
 
 </body>
 </html>
