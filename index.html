@@ -115,9 +115,80 @@ ul {
     font-size: 1.2rem;
   }
 }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+.navbar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Ajustes por el header fijo */
+body {
+  padding-top: 60px;
+}
+
+/* Botón flotante scroll arriba */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #66ccff;
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+
+.scroll-top:hover {
+  background-color: #00b4d8;
+}
+
 </style>
 </head>
 <body>
+
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyecto">El Proyecto</a></li>
+        <li><a href="#tecnologia">Tecnología</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
   
   
   <div class="logo-container">
@@ -128,13 +199,13 @@ ul {
 
   <div class="content">
     <h1 class="fade-in">Proyecto DSA: Dron de Seguridad Aeroportuaria</h1>
-    <h2 class="fade-in">✈️ ¿Qué es el Proyecto DSA?</h2>
+    <h2 class="fade-in">✈️ <span id="proyecto">¿Qué es el Proyecto DSA?</span></h2>
     <p class="fade-in-delayed">El Proyecto DSA (Dron de Seguridad Aeroportuaria) es una iniciativa innovadora creada por estudiantes de la Escuela Industrial N.° 6 “X Brigada Aérea” de Río Gallegos, que busca aplicar la tecnología en beneficio de la seguridad en los aeropuertos.</p>
     <p class="fade-in-delayed">Frente a situaciones reales que pusieron en riesgo operaciones aéreas, surgió la idea de construir un dron capaz de inspeccionar pistas, detectar peligros y disuadir animales, todo de forma más rápida, económica y segura que los métodos tradicionales.</p>
     <h2 class="fade-in">🔍 ¿Por qué es importante?</h2>
     <p class="fade-in-delayed">Hoy en día, muchas inspecciones en pistas se realizan de forma manual, lo que puede generar errores humanos y poner en riesgo a aeronaves y personas. Un caso concreto ocurrió en 2022, cuando un ave fue succionada por el motor de un avión en pleno despegue, debido a una falla en la inspección previa.</p>
     <p class="fade-in-delayed">Este proyecto no solo busca evitar incidentes como ese, sino también demostrar que, con trabajo y formación técnica, es posible crear soluciones reales desde la escuela.</p>
-    <h2 class="fade-in">🌍 Tecnología con impacto real</h2>
+    <h2 class="fade-in">🌍 <span id="tecnologia">Tecnología con impacto real</span></h2>
     <p class="fade-in-delayed">El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como <strong>impresoras 3D</strong> (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank">Frontera 3D</a>), sistemas electrónicos programables y software de control de vuelo.</p>
     <p class="fade-in-delayed">Pero lo más importante es que su diseño tiene una visión sustentable y práctica:</p>
     <ul class="fade-in-delayed">
@@ -149,7 +220,7 @@ ul {
     <p class="fade-in-delayed">El Proyecto DSA demuestra que con compromiso, creatividad y conocimiento, es posible transformar una idea en una solución concreta. Es un ejemplo de cómo la educación técnica pública puede generar herramientas útiles para la sociedad y el sector aeronáutico.</p>
     
     <div class="equipo fade-in-delayed">
-      <p class="fade-in-delayed"><strong>Equipo de Trabajo</strong></p>
+      <p class="fade-in-delayed"><strong><span id="equipo">Equipo de Trabajo</span></strong></p>
       <ul class="fade-in-delayed">
         <li>Montiel Fabrizzio</li>
         <li>Lisandro Medina</li>
@@ -162,8 +233,20 @@ ul {
     </div>
 
 <div class="equipo fade-in-delayed">
-      <p class="fade-in-delayed"><strong>Contacto:</strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
+      <p class="fade-in-delayed"><strong><span id="contacto">Contacto:</span></strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
     </div>
   </div>
+
+  <button class="scroll-top" onclick="scrollToTop()">↑</button>
+  <script>
+    window.onscroll = function() {
+      document.querySelector('.scroll-top').style.display =
+        window.scrollY > 300 ? 'block' : 'none';
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
 </body>
 </html>
