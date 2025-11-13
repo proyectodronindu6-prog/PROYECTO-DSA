@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Proyecto DSA: un dron creado por estudiantes para mejorar la seguridad aeroportuaria con tecnología sustentable y educativa." name="description"/>
+<title>Proyecto DSA: Dron de Seguridad Aeroportuaria | Escuela Industrial N.°6</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<style>
+/* Estilo profesional con fondo técnico */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('385ce2c0-07eb-4137-8bf3-dbf433884412.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fondo oscurecido para legibilidad */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.content, .logo-container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Estilo para logos */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  padding: 8px;
+}
+
+.logo-central img {
+  width: 150px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+p, ul {
+  line-height: 1.8;
+  color: #e6e6e6;
+}
+
+a {
+  color: #66ccff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .logo-container img {
+    width: 70px;
+  }
+
+  .logo-central img {
+    width: 90px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+.navbar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar nav ul li a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Ajustes por el header fijo */
+body {
+  padding-top: 60px;
+}
+
+/* Botón flotante scroll arriba */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #66ccff;
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+
+.scroll-top:hover {
+  background-color: #00b4d8;
+}
+
+
+/* HERO SECTION */
+.hero {
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-content h1 {
+  font-size: 2.2rem;
+  color: #00b4d8;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.cta-button {
+  padding: 10px 20px;
+  background-color: #66ccff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.cta-button:hover {
+  background-color: #00b4d8;
+  color: #fff;
+}
+
+/* GALERIA */
+.galeria {
+  text-align: center;
+}
+.galeria-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.galeria-grid img {
+  width: 200px;
+  border-radius: 8px;
+  border: 2px solid #66ccff;
+}
+
+/* CRONOGRAMA */
+.cronograma {
+  padding: 20px;
+}
+.cronograma .timeline {
+  list-style: none;
+  padding-left: 0;
+}
+.cronograma .timeline li {
+  padding: 10px 0;
+  border-left: 4px solid #66ccff;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* FORMULARIO */
+.formulario {
+  text-align: center;
+  padding: 20px;
+}
+.formulario form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formulario input, .formulario textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.formulario button {
+  background-color: #66ccff;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.formulario button:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
+/* BOTÓN FLOTANTE */
+.floating-contact {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background-color: #66ccff;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px 13px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+.floating-contact:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="hero-content">
+<h1>DSA: Tecnología para un cielo más seguro</h1>
+<p>Un proyecto estudiantil con impacto real en la seguridad aeroportuaria</p>
+<a class="cta-button" href="#proyecto">Conocer el Proyecto</a>
+</div>
+</section>
+<header class="navbar">
+<nav>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#proyecto">El Proyecto</a></li>
+<li><a href="#tecnologia">Tecnología</a></li>
+<li><a href="#equipo">Equipo</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
+</header>
+<div class="logo-container">
+<img alt="Logo Escuela Industrial N.° 6 X Brigada Aérea" src="escuela.jpeg"/>
+<img alt="Logo Proyecto DSA" class="logo-central" src="logo.jpg"/>
+<img alt="Logo Aeronáutica Escuela Industrial N.° 6" src="tecnicatura.jpeg"/>
+</div>
+<div class="content">
+<h1 class="fade-in">Proyecto DSA: Dron de Seguridad Aeroportuaria</h1>
+<h2 class="fade-in">✈️ <span id="proyecto">¿Qué es el Proyecto DSA?</span></h2>
+<p class="fade-in-delayed">El Proyecto DSA (Dron de Seguridad Aeroportuaria) es una iniciativa innovadora creada por estudiantes de la Escuela Industrial N.° 6 “X Brigada Aérea” de Río Gallegos, que busca aplicar la tecnología en beneficio de la seguridad en los aeropuertos.</p>
+<p class="fade-in-delayed">Frente a situaciones reales que pusieron en riesgo operaciones aéreas, surgió la idea de construir un dron capaz de inspeccionar pistas, detectar peligros y disuadir animales, todo de forma más rápida, económica y segura que los métodos tradicionales.</p>
+<h2 class="fade-in">🔍 ¿Por qué es importante?</h2>
+<p class="fade-in-delayed">Hoy en día, muchas inspecciones en pistas se realizan de forma manual, lo que puede generar errores humanos y poner en riesgo a aeronaves y personas. Un caso concreto ocurrió en 2022, cuando un ave fue succionada por el motor de un avión en pleno despegue, debido a una falla en la inspección previa.</p>
+<p class="fade-in-delayed">Este proyecto no solo busca evitar incidentes como ese, sino también demostrar que, con trabajo y formación técnica, es posible crear soluciones reales desde la escuela.</p>
+<h2 class="fade-in">🌍 <span id="tecnologia">Tecnología con impacto real</span></h2>
+<p class="fade-in-delayed">El dron fue diseñado por los propios estudiantes y construido dentro del establecimiento, utilizando herramientas como <strong>impresoras 3D</strong> (<a href="https://www.instagram.com/frontera_3d?igsh=MXdhN2dncjI4MGpsag==" target="_blank">Frontera 3D</a>), sistemas electrónicos programables y software de control de vuelo.</p>
+<p class="fade-in-delayed">Pero lo más importante es que su diseño tiene una visión sustentable y práctica:</p>
+<ul class="fade-in-delayed">
+<li>Reduce el uso de vehículos terrestres y combustible</li>
+<li>Disminuye la carga de trabajo del personal</li>
+<li>Ofrece una nueva herramienta educativa y profesional</li>
+</ul>
+<h2 class="fade-in">📚 Más que un proyecto escolar</h2>
+<p class="fade-in-delayed">Además de su utilidad técnica, el DSA tiene un enorme valor educativo. Permite a los estudiantes aplicar conocimientos reales, trabajar en equipo, y prepararse para desafíos del mundo laboral.</p>
+<p class="fade-in-delayed">El dron también cumple con las normativas nacionales e internacionales, lo que abre la puerta a que pueda ser utilizado en aeropuertos reales o replicado en otras escuelas técnicas del país.</p>
+<h2 class="fade-in">🙌 Un trabajo con visión de futuro</h2>
+<p class="fade-in-delayed">El Proyecto DSA demuestra que con compromiso, creatividad y conocimiento, es posible transformar una idea en una solución concreta. Es un ejemplo de cómo la educación técnica pública puede generar herramientas útiles para la sociedad y el sector aeronáutico.</p>
+<div class="equipo fade-in-delayed">
+<p class="fade-in-delayed"><strong><span id="equipo">Equipo de Trabajo</span></strong></p>
+<ul class="fade-in-delayed">
+<li>Montiel Fabrizzio</li>
+<li>Lisandro Medina</li>
+<li>Inalef Luciano</li>
+<li>Alancay Lautaro</li>
+</ul>
+<p class="fade-in-delayed"><strong>Docentes:</strong> Sabino Cayo – Ramón Gómez</p>
+<p class="fade-in-delayed">Gracias a todos los que apoyaron este proyecto educativo y técnico.</p>
+<p>Exponemos el <strong>14 de noviembre</strong> en la Escuela Industrial N.° 6 “X Brigada Aérea” y el <strong>17 y 18 de noviembre</strong> en la Escuela Industrial N.° 4.</p>
+</div>
+<div class="equipo fade-in-delayed">
+<p class="fade-in-delayed"><strong><span id="contacto">Contacto:</span></strong> <a href="mailto:proyecto.dron.indu6@gmail.com">proyecto.dron.indu6@gmail.com</a></p>
+</div>
+</div>
+<button class="scroll-top" onclick="scrollToTop()">↑</button>
+<script>
+    window.onscroll = function() {
+      document.querySelector('.scroll-top').style.display =
+        window.scrollY > 300 ? 'block' : 'none';
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+<section class="galeria" id="galeria">
+<h2>Galería del Proyecto</h2>
+<div class="galeria-grid"><img alt="Imagen 1" src="images/1.jpg"/><img alt="Imagen 2" src="images/2.jpg"/><img alt="Imagen 3" src="images/3.jpg"/><img alt="Imagen 4" src="images/4.jpg"/><img alt="Imagen 5" src="images/5.jpg"/><img alt="Imagen 6" src="images/6.jpg"/></div>
+</section>
+<section class="cronograma" id="cronograma">
+<h2>Cronograma del Proyecto</h2>
+<ul class="timeline">
+<li><strong>Abril:</strong> Inicio de la idea y primeros bocetos</li>
+<li><strong>Mayo - Junio:</strong> Diseño técnico y planificación</li>
+<li><strong>Julio - Septiembre:</strong> Construcción del dron</li>
+<li><strong>Octubre:</strong> Pruebas y ajustes</li>
+<li><strong>Noviembre:</strong> Presentaciones en escuelas técnicas</li>
+</ul>
+</section>
+<section class="formulario" id="formulario">
+<h2>Contacto Rápido</h2>
+<form action="https://formspree.io/f/xayrqjvz" method="POST">
+<input name="name" placeholder="Tu nombre" required="" type="text"/>
+<input name="email" placeholder="Tu correo electrónico" required="" type="email"/>
+<textarea name="message" placeholder="Tu mensaje" required="" rows="4"></textarea>
+<button type="submit">Enviar</button>
+</form>
+</section>
+<a class="floating-contact" href="mailto:proyecto.dron.indu6@gmail.com" title="Escribinos">✉️</a>
+</body>
+</html>
