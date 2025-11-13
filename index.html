@@ -7,236 +7,72 @@
   <title>Proyecto DSA: Dron de Seguridad Aeroportuaria | Escuela Industrial N.°6</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-/* --- ESTILOS GENERALES --- */
-
+/* Fondo dinámico con degradado oscuro */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('fondo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: white;
   min-height: 100vh;
-}
-
-/* Superposición oscura para mejorar legibilidad */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-}
-
-.content, .logo-container {
   position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
 }
 
-/* --- LOGOS EN ESCRITORIO --- */
-.logo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+/* Animación de fondo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Contenedores con efecto de vidrio */
+.content, .logo-container {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Logos con brillo suave */
 .logo-container img {
-  width: 150px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-in;
 }
 
 .logo-container img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.logo-central img {
-  width: 200px;
-}
-
-/* --- TEXTO --- */
+/* Tipografías y títulos modernos */
 h1, h2 {
   text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #00ffe5;
+  text-shadow: 0 0 10px rgba(0, 255, 229, 0.5);
+  letter-spacing: 1px;
 }
 
 p, ul {
-  line-height: 1.8;
-  color: #f0f0f0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  color: #e0f7fa;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ----------------------------- */
-/* --------- MODO MÓVIL -------- */
-/* ----------------------------- */
-
-@media (max-width: 768px) {
-
-  body {
-    background-attachment: scroll;
-  }
-
-  .content {
-    padding: 20px;
-  }
-
-  /* Los logos se quedan en horizontal con tamaños reducidos */
-  .logo-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 5px;
-  }
-
-  .logo-container img {
-  width: 150px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-in;
+a {
+  color: #00ffe5;
 }
 
-.logo-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+a:hover {
+  color: #ffffff;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-  .logo-central img {
-    width: 100px;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-}
-
-  .content {
-    padding: 20px;
-  }
-
-  /* Los logos permanecen en fila horizontal */
-  .logo-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .logo-container img {
-  width: 150px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-in;
-}
-
-.logo-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-  .logo-central img {
-    width: 35vw;
-    max-width: 140px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-}
-
-  .content {
-    padding: 20px;
-  }
-
-  /* Los logos se acomodan UNO debajo del otro */
-  .logo-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo-container img {
-  width: 150px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-in;
-}
-
-.logo-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-  .logo-central img {
-    width: 70%;
-    max-width: 250px;
-  }
-
-  /* Títulos más pequeños */
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-}
-
-/* Animaciones de entrada generales */
+/* Animaciones */
 .fade-in {
   opacity: 0;
   animation: fadeIn ease 1s forwards;
@@ -253,11 +89,35 @@ p, ul {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Transición suave para títulos y párrafos */
-h1, h2, p, ul, .equipo {
-  transition: all 0.5s ease-in-out;
-}
+/* Modo móvil */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
 
+  .logo-container img {
+    width: 80px;
+  }
+
+  .logo-central img {
+    width: 100px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
 </style>
 </head>
 <body>
